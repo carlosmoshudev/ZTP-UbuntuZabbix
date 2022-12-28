@@ -35,7 +35,7 @@ configureZSH()
 createZSHFile()
 {
     touch ~/.zshrc
-    lines=(
+    lines={
         "autoload -Uz promptinit"
         "promptinit"
         "prompt adam1"
@@ -54,7 +54,7 @@ createZSHFile()
         "alias ll='lsd -lh --group-dirs=first'"
         "alias la='lsd -a --group-dirs=first'"
         "alias lah='lsd -lah --group-dirs=first'"
-    )
+    }
     for line in "${lines[@]}"; do
         echo "$line" >> ~/.zshrc
     done
